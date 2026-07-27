@@ -263,3 +263,64 @@
   align-items: center;
   padding: 10px;
 }
+
+.start-page {
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.5rem;
+}
+
+
+.start-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.start-content h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+
+.rules {
+  padding-left: 1.2rem;
+
+  font-size: 1.1rem;
+
+  text-align: left;
+}
+
+
+.rules li {
+  margin-bottom: 0.8rem;
+}
+
+
+.start-button {
+  width: 100%;
+
+  padding: 1.2rem;
+
+  border-radius: 12px;
+
+  border: none;
+
+  background: grey;
+  color: white;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}

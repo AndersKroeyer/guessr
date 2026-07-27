@@ -1,25 +1,23 @@
 
-import roskilde from "../assets/roskilde.jpg";
-import whitehouse from "../assets/whitehouse.jpg";
+import srilanka from "../assets/sri-lanka.png"
+import salkantay from "../assets/salkantay.png"
 import { GameData } from "../types/GameData";
 
 export const QuizDataList: GameData[] = [
   {
-    id: 1,
-    image: roskilde,
+    image: srilanka,
     coords: {
-        lat: 55.61796393636961,
-        lng: 12.083538568270937,
-    },
-    year: 2020
-  },
-  {
-    id: 2,
-    image: whitehouse,
-    coords: {
-        lat: 56.61796393636961,
-        lng: 13.083538568270937,
+        lat: 6.163010621923593,
+        lng: 80.23130546965679,
     },
     year: 2025
+  },
+  {
+    image: salkantay,
+    coords: {
+        lat: -13.38127140184112,
+        lng: -72.58465094463175,
+    },
+    year: 2024
   }
 ];

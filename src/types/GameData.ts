@@ -1,5 +1,4 @@
 export interface GameData {
-  id: number;
   image: string;
   coords: Coordinates;
   year: number;

@@ -174,11 +174,11 @@ export default function QuizPage() {
 }
 
 function getLocationScore(distanceKm: number): number {
-  if (distanceKm < 1) return 5;
-  if (distanceKm < 30) return 4;
-  if (distanceKm < 50) return 3;
-  if (distanceKm < 100) return 2;
-  if (distanceKm < 500) return 1;
+  if (distanceKm < 2) return 5;
+  if (distanceKm < 50) return 4;
+  if (distanceKm < 200) return 3;
+  if (distanceKm < 400) return 2;
+  if (distanceKm < 800) return 1;
   return 0;
 }
 
