@@ -26,10 +26,6 @@ export default function QuizPage() {
   const [distanceToTargetState, setDistanceToTarget] = useState<number>(0);
 
   function handleGuess(latitude: number, longitude: number) {
-    console.log("Location guess:", {
-      latitude,
-      longitude,
-    });
     setCurrentGuess({ lat: latitude, lng: longitude });
   }
 
@@ -46,24 +42,10 @@ export default function QuizPage() {
 
     setYearError(false);
 
-    console.log("Submitted guess:", {
-      year: parsedYear,
-      coors: currentGuess,
-    });
-
     const yearDifference = Math.abs(parsedYear - quizData.year);
     const yearScore = Math.max(0, 5 - yearDifference);
     const distanceKm = haversineDistance(currentGuess!, quizData.coords);
     const distanceScore = getLocationScore(distanceKm);
-    const totalScore = distanceScore + yearScore;
-
-    console.log("stats", {
-      yearDifference,
-      yearScore,
-      distanceKm,
-      distanceScore,
-      totalScore,
-    });
 
     setDistanceScore(distanceScore);
     setYearScore(yearScore);
@@ -152,7 +134,7 @@ export default function QuizPage() {
         <input
           className={yearError ? "year-input error" : "year-input"}
           type="number"
-          placeholder="2026"
+          placeholder="Gæt året"
           value={yearGuessState}
           onChange={(event) => {
             setYear(event.target.value);

@@ -4,14 +4,27 @@ import {
   Marker,
   useMapEvents,
   Polyline,
+  useMap,
 } from "react-leaflet";
 
-import { useMap } from "react-leaflet";
+import L from "leaflet";
+
+import "leaflet/dist/leaflet.css";
 import { useEffect } from "react";
+import guessPin from "../assets/guess-pin.svg"
+import answerPin from "../assets/answer-pin.svg"
 
-import { useState } from "react";
 
-import type { LatLng } from "leaflet";
+const guessIcon = new L.Icon({
+  iconUrl: guessPin,
+  iconSize: [32, 32],
+});
+
+const answerIcon = new L.Icon({
+  iconUrl: answerPin,
+  iconSize: [32, 32],
+});
+
 
 interface GuessMapProps {
   guess?: {
@@ -109,13 +122,13 @@ export default function GuessMap({
         <MapClickHandler onGuessChange={onGuessChange} showResult={false} resetKey={resetKey}/>
       )}
 
-      {guess && <Marker position={guess} />}
+      {guess && <Marker icon={guessIcon} position={guess} />}
 
       {showResult && answer && guess && (
         <>
           <FitBounds guess={guess} answer={answer} />
 
-          <Marker position={answer} />
+          <Marker icon={answerIcon} position={answer} />
 
           <Polyline positions={[guess, answer]} />
         </>
@@ -123,6 +136,7 @@ export default function GuessMap({
 
       {!showResult && guess && (
         <Marker
+          icon={guessIcon} 
           position={guess}
           draggable
           eventHandlers={{
