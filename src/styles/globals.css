@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 1rem;
+  background: var(--surface);
+}
+
+main {
+  flex: 1;
+  display: flex;
+}
+
+.game-view {
+  flex: 1;
+}
+
+.street-view {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #222;
+}
+
+.bottom-sheet {
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.bottom-sheet button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .bottom-sheet {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 320px;
+    border-radius: var(--radius);
+  }
+}
