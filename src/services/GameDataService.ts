@@ -1,4 +1,3 @@
-
 import srilanka from "../assets/sri-lanka.png"
 import salkantay from "../assets/salkantay.png"
 import { GameData } from "../types/GameData";

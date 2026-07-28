@@ -8,7 +8,6 @@ export default function StartPage() {
     setGameState,
   } = useGameState();
 
-
   function startGame() {
     setGameState({
       currentRound: 1,
@@ -21,7 +20,6 @@ export default function StartPage() {
       replace: true,
     });
   }
-
 
   return (
     <main className="start-page">
