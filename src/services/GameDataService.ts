@@ -1,6 +1,6 @@
+import { GameData } from "../types/GameData";
 import srilanka from "../assets/sri-lanka.png"
 import salkantay from "../assets/salkantay.png"
-import { GameData } from "../types/GameData";
 
 export const QuizDataList: GameData[] = [
   {
