@@ -7,8 +7,8 @@ export const QuizDataList: GameData[] = [
   {
     image: srilanka,
     coords: {
-        lat: 6.163010621923593,
-        lng: 80.23130546965679,
+        lat: 6.009153371126551,
+        lng: 80.24533729848292,
     },
     year: 2025
   },
